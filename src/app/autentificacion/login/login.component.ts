@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     for(let i = 0; i< this.datos.length; i++){
       if (this.usernameInput.toLowerCase() === this.datos[i].perteneceA.toLowerCase()){
         
-        sessionStorage.setItem('username', this.usernameInput);
+        sessionStorage.setItem('nombredeusuario', this.usernameInput);
         this.router.navigate(['/home'])
         loginExiste = true;
         return

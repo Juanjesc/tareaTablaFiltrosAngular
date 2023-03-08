@@ -49,7 +49,7 @@ export class HomeComponent implements AfterViewInit {
   }
   logueado() {
     var logueado = false;
-    if (sessionStorage.getItem('username')) {
+    if (sessionStorage.getItem('nombredeusuario')) {
       logueado = true;
       
     }
@@ -61,7 +61,7 @@ export class HomeComponent implements AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.username = sessionStorage.getItem('username') ?? ''; //esto lo que hace es que si sessionStorage es null ponga por defecto ''
+    this.username = sessionStorage.getItem('nombredeusuario') ?? ''; //esto lo que hace es que si sessionStorage es null ponga por defecto ''
 
     this.pintarTabla();
   }
@@ -99,6 +99,6 @@ export class HomeComponent implements AfterViewInit {
     }
   }
   clearSesionStorage() {
-    sessionStorage.clear();
+    sessionStorage.removeItem('nombredeusuario') 
   }
 }
