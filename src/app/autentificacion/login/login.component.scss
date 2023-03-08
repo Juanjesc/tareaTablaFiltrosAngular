@@ -1,0 +1,145 @@
+.container_form {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 600px;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 100%;
+    font-family: montserrat;
+    //box-shadow: 0px 0px 2px black;
+    //background-color: black;
+    color: white;
+    backdrop-filter: blur(20px);
+    background-color: #020015dd;
+    
+
+    @media (min-width:768px){
+        box-shadow: 1px 1px 5px white;
+
+    }
+    .title {
+      text-align: center;
+    }
+    .iconoLogin{
+        width: 100%;
+        align-items: center;
+        margin: .5rem 0;
+        display: flex;
+        gap: 2rem;
+
+        
+        
+        .icono{
+            font-size: 3rem;
+            position: relative;
+            top: -4px;
+            color: white;
+        }
+    }
+  }
+  .campo {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    align-items: center;
+
+    label {
+      flex-basis: 10rem;
+      font-size: 14px;
+    }
+    input {
+      width: 100%;
+      padding: 1rem;
+      box-shadow: 2px 2px 5px #00CD8A;
+      border: none;
+      background-color: transparent;
+      backdrop-filter: blur(10px);
+      color: #00CD8A;
+      &::placeholder{
+        color: rgb(189, 189, 189);
+      }
+    }
+
+    .botonSubmit {
+      display: block;
+      padding: 0.5rem 1rem;
+      border: none;
+      box-shadow: 1px 1px 5px black;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: all 0.2s ease-in;
+      cursor: pointer;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      background-color: #58005c;
+      color: white;
+      &:hover {
+        background-color: white;
+        color: #58005c;
+      }
+    }
+  }
+  .campoBoton {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+
+.box:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, #00cd8a 6%, #58005c 94% );
+    transform: translate3d(9px, 9px, 0) scale(0.98);
+    filter: blur(20px);
+    opacity: var(0.5);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.box::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+.validUser{
+  margin-top: 2rem;
+  position: relative;
+  top: 20px;
+  span{
+    
+    color: #00CD8A;
+  }
+}
+          

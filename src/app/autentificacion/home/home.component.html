@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="container_header_content">
+    <div class="contentHeader">
+      <span><mat-icon class="icono">account_circle</mat-icon></span>
+      <p class="title">Bienvenido {{username.toLowerCase()}} 😃</p>
+    </div>
+  </div>
+</header>
+<div class="containerPagina">
+
+  <div class="containerFilter">
+  
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+      </mat-form-field>
+  </div>
+  <div class="info">
+    <p>* El resultado de la tabla ya filtrada se repite 20 veces para probar la paginación</p>
+  </div>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort class="box">
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+      
+      <!-- Nombre de juego Column -->
+      <ng-container matColumnDef="nombreJuego">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Juego </th>
+        <td mat-cell *matCellDef="let row"> {{row.nombreJuego}} </td>
+      </ng-container>
+  
+      <!-- Consola Column -->
+      <ng-container matColumnDef="consola">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Plataforma </th>
+        <td mat-cell *matCellDef="let row"> {{row.consola}} </td>
+      </ng-container>
+  
+      <!-- Año Column -->
+      <ng-container matColumnDef="anio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Año </th>
+        <td mat-cell *matCellDef="let row"> {{row.anio}}</td>
+      </ng-container>
+  
+       <!-- Dueño -->
+      <ng-container matColumnDef="perteneceA">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dueño </th>
+        <td mat-cell *matCellDef="let row"> {{row.perteneceA}}</td>
+      </ng-container>
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No se han encontrado datos para el usuario "{{username}}" 😢</td>
+      </tr>
+    </table>
+    <div class="paginator">
+      <mat-paginator [pageSizeOptions]="[5, 10]" aria-label="Select page of users"></mat-paginator>
+    </div>
+  </div>
+  
+  <div class="botonVolver">
+    <button (click)="clearSesionStorage()" routerLink="/">Log Out</button>
+  </div>
+</div>

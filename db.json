@@ -1,0 +1,46 @@
+{
+  "juegos": [
+    {
+      "id": 1,
+      "nombreJuego": "Pokemon Diamante",
+      "consola": "Nintendo DS",
+      "anio": 2007,
+      "perteneceA": "Juanje"
+    },
+    {
+      "id": 2,
+      "nombreJuego": "Mario Kart 8 Deluxe",
+      "consola": "Nintendo Switch",
+      "anio": 2017,
+      "perteneceA": "Sergio"
+    },
+    {
+      "id": 3,
+      "nombreJuego": "Call of Duty Black Ops",
+      "consola": "Multiplataforma",
+      "anio": 2010,
+      "perteneceA": "Juanje"
+    },
+    {
+      "id": 4,
+      "nombreJuego": "BloodBorne",
+      "consola": "PlayStation 4",
+      "anio": 2015,
+      "perteneceA": "Sergio"
+    },
+    {
+      "id": 5,
+      "nombreJuego": "Pokemon Esmeralda",
+      "consola": "Nintendo Game Boy Advance GBA",
+      "anio": 2005,
+      "perteneceA": "Juanje"
+    },
+    {
+      "id": 6,
+      "nombreJuego": "Fallout 4",
+      "consola": "Multiplataforma",
+      "anio": 2015,
+      "perteneceA": "Antonio"
+    }
+  ]
+}

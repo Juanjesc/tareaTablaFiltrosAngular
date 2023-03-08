@@ -1,0 +1,171 @@
+header {
+  width: 100%;
+  background-color: #490050;
+  box-shadow: 1px 0px 2px black;
+  .container_header_content {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .contentHeader {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+    span {
+      display: flex;
+    }
+  }
+}
+table {
+  width: 100%;
+  background-color: #4900506a;
+  position: relative;
+  font-family: montserrat;
+
+  
+}
+.mat-elevation-z8 {
+  margin: 0 auto;
+  width: 95%;
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 30%;
+  color: white;
+
+  &:first-of-type {
+    width: 15%;
+  }
+}
+.containerPagina {
+  //backdrop-filter: blur(10px);
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+.containerFilter {
+  width: max-content;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 5px #00cd8a;
+  background-color: #490050;
+  padding: .3rem 1rem;
+
+  
+  
+  //margin-top: 4rem;
+}
+
+.botonVolver {
+  margin: 2rem auto;
+  width: 80%;
+  button {
+    display: block;
+    padding: 1rem;
+    border: none;
+    box-shadow: 1px 1px 5px black;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: #490050;
+    width: 100%;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: #490050;
+    }
+  }
+}
+.mat-paginator {
+  background-color: #490050cf;
+  color: white;
+  font-family: montserrat;
+}
+::ng-deep.mat-select-value {
+  color: white;
+  font-family: montserrat;
+}
+::ng-deep.mat-select-arrow{
+  color: white !important;
+}
+
+::ng-deep.mat-paginator-icon{
+  color: white
+}
+::ng-deep.mat-input-element{
+  color: #00cd8a !important;
+  caret-color: white !important;
+  &::placeholder{
+    color: rgb(193, 193, 193);
+  }
+}
+::ng-deep.mat-form-field-appearance-legacy .mat-form-field-label{
+  color: white;
+
+}
+::ng-deep.mat-form-field-appearance-legacy .mat-form-field-underline{
+  background-color: white;
+}
+.info p{
+  color: #00cd8a;
+  font-size: 15px;
+  width: 80%;
+  margin: .5rem auto;
+}
+
+          
+
+.box:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, #00cd8a 6%, #58005c 94% );
+    transform: translate3d(9px, 9px, 0) scale(0.98);
+    filter: blur(20px);
+    opacity: var(0.5);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.box::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}

@@ -1,0 +1,26 @@
+<div class="container_form">
+  <form action="" class="form box">
+      <div class="iconoLogin">
+        <span><mat-icon class="icono">account_circle</mat-icon></span>
+        <h2 class="title">Log In</h2>
+    </div>
+    <div class="campo">
+      <label for="inicio">Nombre de usuario:</label>
+      <input
+        type="text"
+        name="nombre_usuario"
+        id="inicio"
+        class="inicioInput"
+        placeholder="Inicia Sesión"
+        required
+        [(ngModel)]="usernameInput"
+      />
+    </div>
+    <p class="validUser">Usuarios válidos: <span>juanje, sergio, antonio</span></p>
+    <div class="campo campoBoton">
+      <button (click)="onSubmit($event)" type="submit" class="botonSubmit">
+        Login
+      </button>
+    </div>
+  </form>
+</div>
